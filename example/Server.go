@@ -20,7 +20,8 @@ func KickFun(client *network.Client) {
 }
 
 func HandlerFun(client *network.Client, context network.Context) {
-	fmt.Println("handler", client, context)
+	fmt.Println("handler", client)
+	fmt.Printf("%+v", context)
 }
 
 func main() {
