@@ -41,6 +41,7 @@ func (nw *SocketServer) handleClient(connect *net.TCPConn) {
 		SenderBox:   make(chan Context, nw.SenderBoxQueueSize),
 		ReceiverBox: make(chan Context, nw.ReceiverBoxQueueSize),
 		MainBox:     make(chan Context, nw.MainBoxQueueSize),
+		Data: 		 make(map[string]interface{}),
 	}
 
 	if nw.TickInterval > 0 {

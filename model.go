@@ -70,6 +70,8 @@ type Client struct {
 	ReceiverBox chan Context
 	MainBox     chan Context
 
+	Data map[string]interface{}
+
 	TickChan <-chan time.Time
 }
 
